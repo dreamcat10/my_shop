@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.RelationMapper">
+    <insert id="addUserToken" parameterType="com.syliva.mymall.pojo.UserToken">
+        insert into User(userId,token, expireTime,updateTime)
+        values(#{userId},#{token},#{expireTime},#{updateTime})
+    </insert>
+    <delete id="removeById" parameterType="String">
+         delete from student where userId = #{userId}
+    </delete>
+</mapper>
+
